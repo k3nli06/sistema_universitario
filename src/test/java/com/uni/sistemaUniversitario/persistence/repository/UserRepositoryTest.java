@@ -15,7 +15,7 @@ public class UserRepositoryTest {
 
     @Test
     public void userRepositoryTest() {
-        UserEntity user = new UserEntity(1L, "610-061207-1000Y", null, null, null, null, null, null);
+        UserEntity user = new UserEntity(1L, "610-061207-1000Y", "0008998990", null, null, null, null, null, null, null);
 
         repository.save(user);
         assertNotNull(repository.findById(1L));
