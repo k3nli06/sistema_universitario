@@ -33,7 +33,7 @@ public class SecurityConfig {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .httpBasic(Customizer.withDefaults())
                 .formLogin(Customizer.withDefaults())
-                .cors(co -> co.disable())
+                .cors(Customizer.withDefaults())
                 .authorizeHttpRequests(request -> {
                     request.requestMatchers("api/v1/**").permitAll();
                     request.anyRequest().authenticated();

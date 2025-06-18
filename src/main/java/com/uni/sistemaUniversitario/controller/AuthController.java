@@ -9,6 +9,7 @@ import com.uni.sistemaUniversitario.dto.AuthenticationResponse;
 import com.uni.sistemaUniversitario.dto.LoginRequest;
 import com.uni.sistemaUniversitario.dto.RegisterRequest;
 import com.uni.sistemaUniversitario.service.AuthenticationService;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -22,7 +23,7 @@ public class AuthController {
 
     @PostMapping("login")
     public ResponseEntity<AuthenticationResponse> login(@RequestBody LoginRequest request) {
-        return ResponseEntity.accepted().body(authService.login(request));        
+        return ResponseEntity.ok().body(authService.login(request));        
     }
 
     @PostMapping("register")
